@@ -85,18 +85,16 @@ st.title("🔢 Analisis Kompleksitas Merge Sort")
 st.markdown("Studi Kasus: **Pengurutan Video YouTube Berdasarkan Views**")
 st.write("---")
 
-# --- SIDEBAR (BAGIAN YANG DIUBAH) ---
+
 st.sidebar.header("1. Pengaturan Data")
 
-# Pilihan metode input
+
 input_method = st.sidebar.radio("Pilih Sumber Data:", ["🎲 Generate Random (Acak)", "✍️ Input Manual"])
 
 raw_data = []
 
 if input_method == "🎲 Generate Random (Acak)":
-    # === PERUBAHAN DI SINI ===
-    # Sebelumnya: st.slider (terbatas)
-    # Sekarang: st.number_input (bisa ketik angka bebas)
+
     n = st.sidebar.number_input("Masukkan Jumlah Data (N):", min_value=10, value=1000, step=100)
     
     if st.sidebar.button("Generate Data"):
